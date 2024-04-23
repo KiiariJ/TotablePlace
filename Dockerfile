@@ -5,13 +5,16 @@ FROM node:14-alpine
 WORKDIR /usr/src/C:\Users\klewis4\jsProgs\expressbykiari\newapp.js
 
 #Copy package.json and package-lock.json to the working directory
-COPY package * .json ./ 
+# COPY package * .json ./ 
 
-#Install application depedencies
-RUN npm install 
+
+
 
 #Copy the rest of the application files to the working directory
 COPY . . /usr/src/C:\Users\klewis4\jsProgs\expressbykiari\newapp.js/
+
+#Install application depedencies
+RUN npm install 
 
 #Expose the port on which the application listens
 EXPOSE 3000
